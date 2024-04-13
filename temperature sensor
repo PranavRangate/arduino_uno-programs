@@ -1,0 +1,18 @@
+
+int sensorpin=A0;
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  float reading=analogRead(sensorpin);
+  
+  float tempC=reading/1024;
+        tempC=tempC*5.0;
+        tempC=tempC-5.0;
+        tempC=tempC*100;
+  Serial.print(tempC);
+  Serial.println("degree cel");
+}
