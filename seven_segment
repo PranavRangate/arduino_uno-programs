@@ -1,0 +1,148 @@
+
+const int A=13;
+const int B=12;
+const int C=11;
+const int D=10;
+const int E=9;
+const int F=8;
+const int G=7;
+const int H=6;
+
+void setup()
+{
+  pinMode(A,OUTPUT);
+  pinMode(B,OUTPUT);
+  pinMode(C,OUTPUT);
+  pinMode(D,OUTPUT);
+  pinMode(E,OUTPUT);
+  pinMode(F,OUTPUT);
+  pinMode(G,OUTPUT);
+  pinMode(H,OUTPUT);
+}
+
+void ZERO()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(G,LOW);
+  digitalWrite(H,HIGH);
+}
+
+void ONE()
+{
+  digitalWrite(A,LOW);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,LOW);
+  digitalWrite(E,LOW);
+  digitalWrite(F,LOW);
+  digitalWrite(G,LOW);
+  digitalWrite(H,LOW);
+}
+
+void TWO()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,LOW);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(F,LOW);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void THREE()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(F,LOW);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void FOUR()
+{
+  digitalWrite(A,LOW);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,LOW);
+  digitalWrite(E,LOW);
+  digitalWrite(F,HIGH);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void FIVE()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,LOW);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(F,HIGH);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void SIX()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,LOW);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void SEVEN()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,LOW);
+  digitalWrite(E,LOW);
+  digitalWrite(F,LOW);
+  digitalWrite(G,LOW);
+  digitalWrite(H,LOW);
+}
+
+void EIGHT()
+{
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(C,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(G,HIGH);
+  digitalWrite(H,HIGH);
+}
+
+void loop()
+{
+  ONE();
+  delay(1000);
+  TWO();
+  delay(1000);
+  THREE();
+  delay(1000);
+  FOUR();
+  delay(1000);
+  FIVE();
+  delay(1000);
+  SIX();
+  delay(1000);
+  SEVEN();
+  delay(1000);
+  EIGHT();
+}
