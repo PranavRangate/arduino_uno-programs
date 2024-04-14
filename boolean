@@ -1,0 +1,20 @@
+int LEDpin=5;
+int switchPin=13;
+boolean running=false;
+
+void setup()
+{
+  pinMode(LEDpin, OUTPUT);
+  pinMode(switchPin, INPUT);
+  digitalWrite(switchPin, LOW);
+}
+
+void loop()
+{
+  if(digitalRead(switchPin)==HIGH)
+  {
+    delay(100);
+    running=!running;
+    digitalWrite(LEDpin,running);
+  }
+}
