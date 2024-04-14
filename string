@@ -1,0 +1,49 @@
+
+void setup()
+{
+  char str[]="This is my string";
+  char out_str[40];
+  int num;
+  char name[]="sandip";
+  Serial.begin(9600);
+  
+  Serial.println(str);
+  
+  num=strlen(str);
+  Serial.print("string length is:");
+  Serial.println(num);
+  
+  num=sizeof(str);
+  Serial.print("size of array is:");
+  Serial.println(num);
+  
+  strcpy(out_str,str);
+  Serial.println(out_str);
+  
+  strcat(out_str,"sketch.");
+  Serial.println(out_str);
+  
+  num=strlen(out_str);
+  Serial.print("out_str string length is:");
+  Serial.println(num);
+  
+  num=sizeof(str);
+  Serial.print("out_str string size is:");
+  Serial.println(num);
+  
+  if(strcmp(name,"sandip")==0)
+  {
+    Serial.print("equal");
+  }
+  else
+  {
+    Serial.print("unequal");
+  }
+    
+  
+}
+
+void loop()
+{
+
+}
