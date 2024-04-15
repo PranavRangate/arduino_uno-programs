@@ -1,0 +1,24 @@
+#include<Servo.h>
+
+Servo servo1;
+
+void setup(){
+  Serial.begin(9600);
+  servo1.attach(8);
+}
+
+void loop(){
+  for(int i=0;i<=180;i=i+10) {
+    servo1.write(i);
+    delay(300);
+    Serial.print("Sending angle: ");
+    Serial.println(i);
+  }
+  
+  for(int i=180;i>=0;i=i-10) {
+    servo1.write(i);
+    delay(300);
+    Serial.print("Sending angle: ");
+    Serial.println(i);
+  }
+}
