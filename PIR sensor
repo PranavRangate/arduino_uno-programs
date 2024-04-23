@@ -1,0 +1,41 @@
+int sensorState = 0;
+
+void setup()
+
+{
+
+pinMode(2, INPUT);
+
+pinMode(LED_BUILTIN, OUTPUT);
+
+Serial.begin(9600);
+
+}
+
+void loop()
+
+{
+
+sensorState = digitalRead(2);
+
+if (sensorState == HIGH)
+
+{
+
+digitalWrite(LED_BUILTIN, HIGH);
+
+Serial.println("Sensor activated!");
+
+}
+
+else
+
+{
+
+digitalWrite(LED_BUILTIN, LOW);
+
+}
+
+delay(10);
+
+}
