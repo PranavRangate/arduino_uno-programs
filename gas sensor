@@ -1,0 +1,86 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(6,7,8,9,10,11);
+
+int piezo = 4;
+
+int red = 3;
+
+int blue = 2;
+
+int GasSensor = A5;
+
+int ThreshHold = 60;
+
+void setup()
+
+{
+
+pinMode(red, OUTPUT);
+
+pinMode(blue,OUTPUT);
+
+pinMode(piezo,OUTPUT);
+
+pinMode(GasSensor,INPUT);
+
+Serial.begin(9600);
+
+lcd.begin(16,2);
+
+}
+
+void loop()
+
+{
+
+int SensorState = analogRead(GasSensor);
+
+int analogValue = SensorState;
+
+Serial.println(analogValue);
+        if(analogValue>ThreshHold)
+
+{
+
+digitalWrite(blue,LOW);
+
+digitalWrite(red,HIGH);
+
+tone(piezo,251,750);
+
+lcd.clear();
+
+lcd.print("NOT GOOD");
+
+delay(750);
+
+lcd.clear();
+
+lcd.print("EXIT NOW");
+
+delay(750);
+
+}
+
+else
+
+{
+
+digitalWrite(red,LOW);
+
+digitalWrite(blue,HIGH);
+
+lcd.clear();
+
+lcd.print("ALL GOOD");
+
+delay(1000);
+
+lcd.clear();
+
+lcd.print("NO NEED TO WORRY");
+
+delay(1000);
+
+} }
