@@ -1,0 +1,41 @@
+int sensorpin = 1;
+
+Int ledPin = 13;
+
+void setup()
+
+{
+
+pinMode(sensorpin , INPUT);
+
+pinMode(ledPin , OUTPUT);
+
+Serial.begin(9600);
+
+}
+
+void loop()
+
+{
+
+int senseValue = digitalRead(sensorPin);
+
+if (senseValue == HIGH)
+
+{ digitalWrite(ledPin ,HIGH);
+
+Serial.println("TOUCHED");
+
+}
+
+Else
+
+{ digitalWrite(ledPin,LOW);
+
+Serial.println("not touched");
+
+}
+
+delay(500);
+
+}
